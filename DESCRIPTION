@@ -1,0 +1,25 @@
+Package: jrOOP
+Type: Package
+Title: The jrOOP package
+Version: 0.1.0
+Authors@R: person("Theo", "Roe",
+    email="theo@jumpingrivers.com", 
+    role = c("aut", "cre"))
+Maintainer: Theo Roe
+    <theo@jumpingrivers.com>
+Description: An R package for the one day Advanced R programming run by Jumping Rivers.
+URL: https://jumpingrivers.com
+VignetteBuilder: knitr
+License: GPL-3 | GPL-2
+Encoding: UTF-8
+Depends:
+    R (>= 3.1)
+Imports:
+    pryr,
+    hexbin,
+    quantreg,
+    gridExtra,
+    ggplot2
+Suggests:
+    knitr, fortunes, tufte, rmarkdown
+RoxygenNote: 6.1.1
