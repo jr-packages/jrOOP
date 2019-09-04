@@ -30,7 +30,7 @@ arg_explore(1, 3, rg = 1)
 #3. Positional matching
 ```
 
-Following on from the above example, can you predict what will happen with
+Following on from the above example, can you predict what will happen with this
 
 ```{r, fig.keep="none", echo = TRUE}
 sample(size = 10, TRUE, x = c(1,2,3,4))
