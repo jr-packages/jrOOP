@@ -2,7 +2,7 @@ This practical is aimed to served as a revision of functions, whilst introducing
 
 ## Argument matching
 
-R allows a variety of ways to match function arguments. For example, by position, by complete name, or by partial name. We haven't covered argument matching in the lecture, so let's try and figure out the rules from the examples below. First we'll create a little function to help
+R allows for a variety of ways to match function arguments. For example, by position, by complete name, or by partial name. We haven't covered argument matching in the lecture, so let's try and figure out the rules from the examples below. First we'll create a little function to help
 
 ```{r, tidy=FALSE, echo = TRUE}
 arg_explore = function(arg1, rg2, rg3){
