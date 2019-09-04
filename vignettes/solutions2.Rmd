@@ -1,5 +1,5 @@
 ---
-title: "Practical 2"
+title: "Solutions 2"
 author: "Jumping Rivers"
 output:
   tufte::tufte_handout:

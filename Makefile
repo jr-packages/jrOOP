@@ -2,13 +2,13 @@
 ## $@ = the output file
 ## $< = the input file
 
-.SUFFIXES: .tex .pdf .Rnw .R
+.SUFFIXES: .tex .pdf .Rmd .R
 
 PKG = jrAdvanced
 DIR = vignettes
 
-PRACS = practical1 practical2 practical3 practical4 
-SOLS = solutions1 solutions2 solutions3 solutions4
+PRACS = practical1 practical2 practical3 
+SOLS = solutions1 solutions2 solutions3
 OTHER = 
 ALL =  $(PRACS)  $(SOLS) $(OTHER)
 
@@ -17,8 +17,8 @@ PRACSPDF = $(PRACS:=.pdf)
 OTHERPDF = $(OTHER:=.pdf)
 ALLPDF = $(ALL:=.pdf)
 
-PRACSRNW =  $(PRACS:=.Rnw)
-SOLSRNW =  $(SOLS:=.Rnw)
+PRACSRMD =  $(PRACS:=.Rmd)
+SOLSRNW =  $(SOLS:=.Rmd)
 
 .PHONY: force sols all clean commit cleaner
 
@@ -28,7 +28,7 @@ force:
 solutions: # $(PRACSPDF)
 
 	$(foreach var, \
-		$(PRACSRNW), \
+		$(PRACSRMD), \
 		cp $(var) $(subst practical, solutions, $(var);))
 
 	## Updated to show results

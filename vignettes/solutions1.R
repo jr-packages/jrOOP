@@ -1,6 +1,6 @@
 ## ----echo=FALSE----------------------------
 library(tufte)
-knitr::opts_chunk$set(results = "hide", echo = TRUE)
+knitr::opts_chunk$set(results = "show", echo = TRUE)
 
 ## ---- tidy=FALSE, echo = TRUE--------------
 arg_explore = function(arg1, rg2, rg3){
