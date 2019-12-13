@@ -13,8 +13,8 @@ args("mean")
 
 ## ----results='hide'------------------------
 mean.cohort = function(x, ...) {
-  m1 = mean(x$details[ ,1], ...)
-  m2 = mean(x$details[ ,2], ...)
+  m1 = mean(x$details[, 1], ...)
+  m2 = mean(x$details[, 2], ...)
   return(c(m1, m2))
 }
 
@@ -22,11 +22,10 @@ mean.cohort = function(x, ...) {
 sd = function(x, ...) UseMethod("sd")
 sd.default = function(x, ...) stats::sd(x, ...)
 sd.cohort = function(x, ...) {
-  s1 = sd(x$details[ ,1], ...)
-  s2 = sd(x$details[ ,2], ...)
+  s1 = sd(x$details[, 1], ...)
+  s2 = sd(x$details[, 2], ...)
   return(c(s1, s2))
-} 
-
+}
 ## ------------------------------------------
 ## summary is already a generic
 body(summary)
@@ -47,12 +46,12 @@ args(hist)
 ## Function
 hist.cohort = function(x, ...) {
   dd = x$details
-  Weight = ggplot(dd, aes(x = weight)) + 
-    geom_histogram() + 
+  Weight = ggplot(dd, aes(x = weight)) +
+    geom_histogram() +
     labs(title = "Weight")
-  Height = ggplot(dd, aes(x = height)) + 
-      geom_histogram() + 
-      labs(title = "Height")
+  Height = ggplot(dd, aes(x = height)) +
+    geom_histogram() +
+    labs(title = "Height")
   gridExtra::grid.arrange(Weight, Height)
 }
 
@@ -60,13 +59,13 @@ hist.cohort = function(x, ...) {
 #  cc[1:3,]
 
 ## ------------------------------------------
-## Lots of methods available. 
-methods('[')
+## Lots of methods available.
+methods("[")
 
 ## Examine [.data.frame
-args('[.data.frame')
+args("[.data.frame")
 
-'[.cohort' = function(x, ...){
+"[.cohort" = function(x, ...) {
   x$details = x$details[...]
   x
 }
@@ -77,11 +76,11 @@ args('[.data.frame')
 ## ---- eval = FALSE-------------------------
 #  ## Lots of methods available.
 #  methods('[<-')
-#  
+#
 #  ## Examine [.data.frame
 #  args('[<-.data.frame')
-#  
-#  '[<-.cohort' = function(x, i, j, value){
+#
+#  '[<-.cohort' = function(x, i, j, value) {
 #    x$details[i, j] = value
 #    x
 #  }
@@ -90,4 +89,3 @@ args('[.data.frame')
 ## ---- eval=FALSE, echo = TRUE--------------
 #  library("jrOOP")
 #  vignette("solutions2", package="jrOOP")
-
