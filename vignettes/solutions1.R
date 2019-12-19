@@ -3,7 +3,7 @@ library(tufte)
 knitr::opts_chunk$set(results = "show", echo = TRUE)
 
 ## ---- tidy=FALSE, echo = TRUE--------------
-arg_explore = function(arg1, rg2, rg3){
+arg_explore = function(arg1, rg2, rg3) {
     paste("a1, a2, a3 = ", arg1, rg2, rg3)
 }
 
@@ -22,17 +22,17 @@ arg_explore = function(arg1, rg2, rg3){
 #3. Positional matching
 
 ## ---- fig.keep="none", echo = TRUE---------
-sample(size = 10, TRUE, x = c(1,2,3,4))
+sample(size = 10, TRUE, x = c(1, 2, 3, 4))
 
 ## ---- results='hide', echo = TRUE----------
-sample(10, TRUE, x = c(1,2,3,4))
+sample(10, TRUE, x = c(1, 2, 3, 4))
 
 ## ---- tidy=FALSE, results='hide', fig.keep='none'----
 ## SOLUTION
 #sample(size = 10, TRUE, x = c(1,2,3,4)) is equivilent to
-sample(x = c(1,2,3,4), size = 10, replace = TRUE)
+sample(x = c(1, 2, 3, 4), size = 10, replace = TRUE)
 #sample(10, TRUE, x = c(1,2,3,4)) is also equivilent to
-sample(x = c(1,2,3,4), size = 10, replace = TRUE)
+sample(x = c(1, 2, 3, 4), size = 10, replace = TRUE)
 
 ## ---- results='hide', echo = TRUE----------
 f = function(x) return(x + 1)
@@ -105,4 +105,3 @@ f(10)
 ## ---- eval=FALSE, echo = TRUE--------------
 #  library("jrOOP")
 #  vignette("solutions1", package="jrOOP")
-
