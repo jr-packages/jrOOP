@@ -1,7 +1,7 @@
 Type: Package
 Package: jrOOP
 Title: The jrOOP package
-Version: 0.1.0
+Version: 0.1.1
 Authors@R: 
     person(given = "Theo",
            family = "Roe",

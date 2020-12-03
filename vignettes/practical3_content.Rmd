@@ -115,3 +115,4 @@ Solutions are contained within the course package
 library("jrOOP")
 vignette("solutions3", package = "jrOOP")
 ```
+
