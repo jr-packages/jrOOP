@@ -1,6 +1,6 @@
 Type: Package
 Package: jrOOP
-Title: The jrOOP package
+Title: Jumping Rivers: Advanced Programming in R
 Version: 0.1.1
 Authors@R: 
     person(given = "Theo",
